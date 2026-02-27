@@ -8,7 +8,7 @@ dotenv.config();
 
 const app = express();
 
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect(process.env.mongodb_url || process.env.MONGO_URI)
     .then(() => console.log('>>> Connected to MongoDB locally'))
     .catch((err) => console.error('DB Connection Error:', err));
 app.use(cors());
