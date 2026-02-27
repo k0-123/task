@@ -1,5 +1,5 @@
 [build]
-  command = "npm run build --prefix mini_project"
+  command = "npm install --prefix mini_project && npm run build --prefix mini_project && npm install --prefix backend"
   publish = "mini_project/dist"
   functions = "backend"
 
